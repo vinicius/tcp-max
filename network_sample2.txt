@@ -1,0 +1,14 @@
+# Links
+link AB
+link AC
+link AD
+link BC
+link CD
+link DB
+
+# Nodes
+node A 100 1000 [] [AC,AD,AB]
+node B 100 10000 [DB,AB] [BC]
+#node C 1000 100000 [AC,BC] []
+node C 1000 150 [AC,BC] [CD]
+node D 75 200 [CD,AD] [DB]

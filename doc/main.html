@@ -1,0 +1,77 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module main</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>main</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/vinicius/dojo/python/tcpmax/main.py">/home/vinicius/dojo/python/tcpmax/main.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-allLocked"><strong>allLocked</strong></a>(links)</dt><dd><tt>Verify&nbsp;if&nbsp;all&nbsp;links&nbsp;are&nbsp;locked<br>
+This&nbsp;function&nbsp;verifies&nbsp;if&nbsp;all&nbsp;links&nbsp;are&nbsp;locked&nbsp;and&nbsp;return&nbsp;true&nbsp;or&nbsp;false.<br>
+Lock&nbsp;is&nbsp;a&nbsp;boolean&nbsp;property&nbsp;of&nbsp;Link<br>
+&nbsp;<br>
+:param&nbsp;links:&nbsp;array&nbsp;of&nbsp;links<br>
+:returns:&nbsp;true&nbsp;of&nbsp;false</tt></dd></dl>
+ <dl><dt><a name="-downloadLeftOver"><strong>downloadLeftOver</strong></a>(nodes)</dt><dd><tt>Calculates&nbsp;the&nbsp;remaining&nbsp;download&nbsp;bandwith&nbsp;of&nbsp;the&nbsp;nodes<br>
+This&nbsp;remaining&nbsp;donwload&nbsp;bandwith&nbsp;can&nbsp;be&nbsp;used&nbsp;in&nbsp;the&nbsp;next&nbsp;round.<br>
+&nbsp;<br>
+:params&nbsp;nodes:&nbsp;array&nbsp;of&nbsp;nodes</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>Main&nbsp;function<br>
+This&nbsp;function&nbsp;finds&nbsp;the&nbsp;distribution&nbsp;of&nbsp;TCP&nbsp;flows&nbsp;among&nbsp;the&nbsp;node&nbsp;links&nbsp;of&nbsp;a&nbsp;network<br>
+based&nbsp;on&nbsp;their&nbsp;upload&nbsp;and&nbsp;donwload&nbsp;capabilities.<br>
+It&nbsp;performs&nbsp;this&nbsp;by&nbsp;executing&nbsp;one&nbsp;or&nbsp;more&nbsp;rounds.&nbsp;Each&nbsp;round&nbsp;has&nbsp;3&nbsp;steps:<br>
+1.&nbsp;Distributed&nbsp;the&nbsp;donwload&nbsp;bandwith&nbsp;among&nbsp;the&nbsp;inflow<br>
+2.&nbsp;Distributed&nbsp;the&nbsp;upload&nbsp;bandwith&nbsp;among&nbsp;the&nbsp;outflow&nbsp;taking&nbsp;the&nbsp;value&nbsp;set&nbsp;by&nbsp;step1&nbsp;as&nbsp;maximum<br>
+3.&nbsp;Calculate&nbsp;the&nbsp;download&nbsp;leftover&nbsp;for&nbsp;the&nbsp;nodes&nbsp;to&nbsp;use&nbsp;in&nbsp;the&nbsp;next&nbsp;round</tt></dd></dl>
+ <dl><dt><a name="-printLinks"><strong>printLinks</strong></a>(links)</dt><dd><tt>Print&nbsp;links&nbsp;information<br>
+&nbsp;<br>
+:param&nbsp;links:&nbsp;array&nbsp;of&nbsp;links&nbsp;to&nbsp;be&nbsp;printed</tt></dd></dl>
+ <dl><dt><a name="-printNodes"><strong>printNodes</strong></a>(nodes)</dt><dd><tt>Print&nbsp;nodes&nbsp;information<br>
+&nbsp;<br>
+:param&nbsp;nodes:&nbsp;array&nbsp;of&nbsp;nodes&nbsp;to&nbsp;be&nbsp;printed</tt></dd></dl>
+ <dl><dt><a name="-splitDownload"><strong>splitDownload</strong></a>(nodes, changed)</dt><dd><tt>Split&nbsp;and&nbsp;distribute&nbsp;the&nbsp;download&nbsp;flow&nbsp;among&nbsp;the&nbsp;incoming&nbsp;connections<br>
+&nbsp;<br>
+:params&nbsp;nodes:&nbsp;array&nbsp;of&nbsp;nodes<br>
+:params&nbsp;changed:&nbsp;boolean&nbsp;to&nbsp;control&nbsp;whether&nbsp;a&nbsp;link&nbsp;was&nbsp;changed<br>
+:returns:&nbsp;true&nbsp;if&nbsp;a&nbsp;link&nbsp;was&nbsp;changed&nbsp;of&nbsp;the&nbsp;actual&nbsp;change&nbsp;value</tt></dd></dl>
+ <dl><dt><a name="-splitUpload"><strong>splitUpload</strong></a>(nodes, changed)</dt><dd><tt>Split&nbsp;and&nbsp;distribute&nbsp;the&nbsp;upload&nbsp;flow&nbsp;among&nbsp;the&nbsp;outcome&nbsp;connections<br>
+This&nbsp;functions&nbsp;distribute&nbsp;the&nbsp;upload&nbsp;flow&nbsp;but&nbsp;respecting&nbsp;the&nbsp;current<br>
+TCP&nbsp;value&nbsp;of&nbsp;the&nbsp;link,&nbsp;if&nbsp;any.&nbsp;It&nbsp;considers&nbsp;the&nbsp;current&nbsp;value&nbsp;was&nbsp;set<br>
+before&nbsp;by&nbsp;the&nbsp;splitDownload&nbsp;function,&nbsp;hence&nbsp;one&nbsp;can&nbsp;not&nbsp;surpasse&nbsp;this<br>
+threshold.&nbsp;If&nbsp;the&nbsp;current&nbsp;value&nbsp;is&nbsp;lower,&nbsp;the&nbsp;surpassed&nbsp;amount&nbsp;is<br>
+accumulate&nbsp;to&nbsp;be&nbsp;divided&nbsp;by&nbsp;the&nbsp;remaining&nbsp;outcome&nbsp;connections.<br>
+The&nbsp;list&nbsp;of&nbsp;outcome&nbsp;connections&nbsp;is&nbsp;sorted&nbsp;by&nbsp;their&nbsp;values&nbsp;(ascending&nbsp;order)<br>
+so&nbsp;the&nbsp;surpasse&nbsp;amount&nbsp;can&nbsp;be&nbsp;safely&nbsp;divided&nbsp;because&nbsp;the&nbsp;remaining&nbsp;connections.<br>
+&nbsp;<br>
+:params&nbsp;nodes:&nbsp;array&nbsp;of&nbsp;nodes<br>
+:params&nbsp;changed:&nbsp;boolean&nbsp;to&nbsp;control&nbsp;whether&nbsp;a&nbsp;link&nbsp;was&nbsp;changed<br>
+:returns:&nbsp;true&nbsp;if&nbsp;a&nbsp;link&nbsp;was&nbsp;changed&nbsp;of&nbsp;the&nbsp;actual&nbsp;change&nbsp;value</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>division</strong> = _Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)</td></tr></table>
+</body></html>

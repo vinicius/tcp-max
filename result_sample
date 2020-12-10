@@ -1,0 +1,94 @@
+Actual state:
+   ::Node A
+     - Outflow (100 Kbits/s max):
+         - Link AC: 33.3333333333 Kbits/s
+         - Link AD: 33.3333333333 Kbits/s
+         - Link AB: 33.3333333333 Kbits/s
+     - Inflow (1000 Kbits/s max):
+
+   ::Node C
+     - Outflow (1000 Kbits/s max):
+         - Link CD: 100.0 Kbits/s
+     - Inflow (150 Kbits/s max):
+         - Link AC: 33.3333333333 Kbits/s
+         - Link BC: 75.0 Kbits/s
+
+   ::Node B
+     - Outflow (100 Kbits/s max):
+         - Link BC: 75.0 Kbits/s
+     - Inflow (10000 Kbits/s max):
+         - Link DB: 75.0 Kbits/s
+         - Link AB: 33.3333333333 Kbits/s
+
+   ::Node D
+     - Outflow (75 Kbits/s max):
+         - Link DB: 75.0 Kbits/s
+     - Inflow (200 Kbits/s max):
+         - Link CD: 100.0 Kbits/s
+         - Link AD: 33.3333333333 Kbits/s
+
+Actual state:
+   ::Node A
+     - Outflow (100 Kbits/s max):
+         - Link AC: 33.3333333333 Kbits/s
+         - Link AD: 33.3333333333 Kbits/s
+         - Link AB: 33.3333333333 Kbits/s
+     - Inflow (1000 Kbits/s max):
+
+   ::Node C
+     - Outflow (1000 Kbits/s max):
+         - Link CD: 166.666666667 Kbits/s
+     - Inflow (150 Kbits/s max):
+         - Link AC: 33.3333333333 Kbits/s
+         - Link BC: 100.0 Kbits/s
+
+   ::Node B
+     - Outflow (100 Kbits/s max):
+         - Link BC: 100.0 Kbits/s
+     - Inflow (10000 Kbits/s max):
+         - Link DB: 75.0 Kbits/s
+         - Link AB: 33.3333333333 Kbits/s
+
+   ::Node D
+     - Outflow (75 Kbits/s max):
+         - Link DB: 75.0 Kbits/s
+     - Inflow (200 Kbits/s max):
+         - Link CD: 166.666666667 Kbits/s
+         - Link AD: 33.3333333333 Kbits/s
+
+Actual state:
+   ::Node A
+     - Outflow (100 Kbits/s max):
+         - Link AC: 33.3333333333 Kbits/s
+         - Link AD: 33.3333333333 Kbits/s
+         - Link AB: 33.3333333333 Kbits/s
+     - Inflow (1000 Kbits/s max):
+
+   ::Node C
+     - Outflow (1000 Kbits/s max):
+         - Link CD: 166.666666667 Kbits/s
+     - Inflow (150 Kbits/s max):
+         - Link AC: 33.3333333333 Kbits/s
+         - Link BC: 100.0 Kbits/s
+
+   ::Node B
+     - Outflow (100 Kbits/s max):
+         - Link BC: 100.0 Kbits/s
+     - Inflow (10000 Kbits/s max):
+         - Link DB: 75.0 Kbits/s
+         - Link AB: 33.3333333333 Kbits/s
+
+   ::Node D
+     - Outflow (75 Kbits/s max):
+         - Link DB: 75.0 Kbits/s
+     - Inflow (200 Kbits/s max):
+         - Link CD: 166.666666667 Kbits/s
+         - Link AD: 33.3333333333 Kbits/s
+
+Flow (final state):
+- Link AC: 33.3333333333 Kbits/s, locked: True
+- Link AB: 33.3333333333 Kbits/s, locked: True
+- Link AD: 33.3333333333 Kbits/s, locked: True
+- Link BC: 100.0 Kbits/s, locked: True
+- Link DB: 75.0 Kbits/s, locked: True
+- Link CD: 166.666666667 Kbits/s, locked: False

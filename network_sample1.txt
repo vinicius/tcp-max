@@ -1,0 +1,8 @@
+link AB
+link AC
+link BC
+
+node A 100 1000 [] [AB,AC]
+node B 100 10000 [AB] [BC]
+#node C 1000 100000 [BC,AC] []
+node C 1000 150 [AC,BC] []
